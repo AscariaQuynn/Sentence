@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentence</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <script src="/js/app.js"></script>
+</head>
+<body>
+
+<h1>Sentence</h1>
+
+<div class="login-box unauthenticated">
+    Authenticated with Google: <span id="isAuthenticated"></span><br />
+    Login with Google: <a href="/login">Login</a><br />
+</div>
+
+<div class="login-box authenticated">
+    Logged in as: <span id="user"></span><br />
+    Logout: <a href="#logout" onclick="app.logout();return false;">Logout</a><br />
+</div>
+
+<div>
+    <input id="userRequest" type="button" value="User Request" />
+</div>
+
+<div class="authenticated">
+    <p>authenticated div shown</p>
+
+    <div class="leftColumn">
+        <form id="createWordForm">
+            <fieldset>
+                <legend>Create Word</legend>
+                Name: <input name="name" /><br />
+                WordCategory:
+                <select name="wordCategory">
+                    <option value="NOUN">Podstatné jméno</option>
+                    <option value="VERB">Sloveso</option>
+                    <option value="ADJECTIVE">Přídavné jméno</option>
+                </select><br />
+                <input id="createWord" type="submit" value="Create Word" />
+            </fieldset>
+        </form>
+
+        <fieldset>
+            <legend>Words List</legend>
+            <table id="wordsList" class="display">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Word Category</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>VERB</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+
+    <div class="rightColumn">
+        <fieldset>
+            <legend>Generate Sentence</legend>
+            <input id="generateSentence" type="button" value="Generate Sentence" />
+            <p></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sentences List</legend>
+            <table id="sentencesList" class="display">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Display Count</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Sentence Name</td>
+                    <td>0</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+
+    <div class="cleaner"></div>
+</div>
+
+<div class="unauthenticated">
+    <p>showing unauthenticated div</p>
+</div>
+
+</body>
+</html>

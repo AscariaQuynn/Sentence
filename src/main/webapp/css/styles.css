@@ -1,0 +1,52 @@
+
+fieldset {
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse:collapse;
+}
+td {
+    padding:5px;
+}
+
+.authenticated,
+.unauthenticated {
+    display:none;
+}
+
+.login-box {
+    width:300px;
+    margin:0px auto;
+    padding:5px;
+    border:1px solid silver;
+}
+
+.cleaner {
+    clear:both;
+}
+
+.leftColumn {
+    width:48%;
+    float:left;
+}
+
+.rightColumn {
+    width:48%;
+    float:right;
+}
+
+.button {
+    padding:0.2em 1em;
+    text-decoration:none;
+    line-height:2em;
+    color:#333;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcdcdc));
+    background: -webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -o-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: linear-gradient(to bottom, #fff 0%, #dcdcdc 100%);
+    border:1px solid gray;
+    border-radius: 2px;
+}
